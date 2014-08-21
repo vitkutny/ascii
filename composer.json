@@ -1,0 +1,8 @@
+{
+    "name": "vitkutny/ascii",
+    "autoload": {
+        "psr-4": {
+            "VitKutny\\": "src/"
+        }
+    }
+}
