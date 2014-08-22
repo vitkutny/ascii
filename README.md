@@ -17,9 +17,9 @@ use VitKutny\Ascii\Text;
 $text = new Text\Renderer('Hello world!');
 $text->setFont(new Text\Font\Figlet(__DIR__ . '/fonts/figlet-font.flf');
 $text->render(); //or echo $text;
+```
 
 Now this will work fine only in console. Because no lineBreakWrapper and stringWrapper are set.
-```
 
 Wrappers
 --------
