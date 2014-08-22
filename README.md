@@ -19,18 +19,18 @@ $text->setFont(new Text\Font\Figlet(__DIR__ . '/fonts/figlet-font.flf');
 $text->render(); //or echo $text;
 ```
 
-Now this will work fine only in console. Because no lineBreakWrapper and stringWrapper are set.
+Now this will work fine only in console. Because no `lineBreakWrapper` and `stringWrapper` are set.
 
 Wrappers
 --------
-Basic render in <pre> tag:
+Basic render in HTML tag `<pre>`:
 
 ```php
 $text->setStringWrapper(Text\Wrapper::el('pre'));
 $text->setLineBreak(Text\Wrapper::el('br'));
 ```
 
-Render ascii text in table:
+Render ASCII text in table:
 
 ```php
 $text->setStringWrapper(Text\Wrapper::el('table'));
@@ -50,7 +50,7 @@ Using wrappers output will have some usefull classes e.g. for styling.
 </table>
 ```
 
-CharacterLineWrapper also has class containing ASCII number of the character, e.g. for letter A:
+`CharacterLineWrapper` also has class containing ASCII number of the character, e.g. for letter A:
 
 ```html
 <span class="ascii-character ascii-character-65">
@@ -61,4 +61,4 @@ CharacterLineWrapper also has class containing ASCII number of the character, e.
 Console
 -------
 
-ASCII text renderer works like a charm in console by removing HTML tags and replacing Text\Renderer::$lineBreak by PHP_EOL.
+ASCII text renderer works like a charm in console by removing HTML tags and replacing `Text\Renderer::$lineBreak` by `PHP_EOL`.
