@@ -27,7 +27,7 @@ Using wrappers output will have some usefull classes e.g. for styling.
 ```html
 <table class="ascii-string ascii-font-figlet-font">
   <tr class="ascii-line">
-      <td class="pixel"></td>
+      <td class="ascii-pixel"></td>
       ...
   </tr>
   ...
