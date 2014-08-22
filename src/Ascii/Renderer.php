@@ -2,6 +2,6 @@
 
 namespace VitKutny\Ascii;
 
-class Generator {
+abstract class Renderer {
     
 }
