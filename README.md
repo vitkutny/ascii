@@ -17,12 +17,21 @@ use VitKutny\Ascii\Text;
 $text = new Text\Renderer('Hello world!');
 $text->setFont(new Text\Font\Figlet(__DIR__ . '/fonts/figlet-font.flf');
 $text->render(); //or echo $text;
+
+Now this will work fine only in console. Because no lineBreakWrapper and stringWrapper are set.
 ```
 
 Wrappers
 --------
+Basic render in <pre> tag:
+
+```php
+$text->setStringWrapper(Text\Wrapper::el('pre'));
+$text->setLineBreak(Text\Wrapper::el('br'));
+```
 
 Render ascii text in table:
+
 ```php
 $text->setStringWrapper(Text\Wrapper::el('table'));
 $text->setLineWrapper(Text\Wrapper::el('tr'));
