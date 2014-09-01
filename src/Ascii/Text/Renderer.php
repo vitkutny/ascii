@@ -62,7 +62,6 @@ final class Renderer extends Ascii\Renderer {
      */
     public function __construct($text) {
         $this->text = $text;
-        $this->consoleMode = php_sapi_name() === 'cli';
         $this->string = $this->line = $this->lineBreak = $this->characterLine = $this->characterSeparator = $this->pixel = Text\Wrapper::el();
     }
 
@@ -199,6 +198,14 @@ final class Renderer extends Ascii\Renderer {
      */
     public function setPixelWrapper(Text\Wrapper $pixel) {
         $this->pixel = $pixel;
+        return $this;
+    }
+
+    /**
+     * @return Text\Renderer
+     */
+    public function setConsoleMode() {
+        $this->consoleMode = TRUE;
         return $this;
     }
 
